@@ -1,0 +1,1 @@
+from mastadon import Mastodon
