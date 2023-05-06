@@ -2,9 +2,22 @@
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 import pandas as pd
+import json
+import csv
+
+with open('tweet_words.json', encoding = 'utf-8') as inputfile:
+    tweet_words = pd.read_json(inputfile)
+tweet_words.to_csv('tweet_words.csv', encoding = 'utf-8', index = False)
+tweet_words = [str(i) for i in "tweet_words.csv"]
 
 # Reads 'Youtube04-Eminem.csv' file
-df = pd.read_json("tweet_words.json")
+# df = pd.read_json("tweet_words.json")
+# df = pd.read_json('reddit_words.json')
+# df = df.to_csv('reddit_words.json')
+# df = [str(i) for i in df]
+# df.describe()
+
+df = tweet_words
 
 comment_words = ''
 stopwords = set(STOPWORDS)
