@@ -1,3 +1,5 @@
+##IMPORTANT MAY & DOMO DO NOT RUN THIS CODE IT WILL MELT YOUR COMPUTER
+## ALL YOU NEED TO ACCESS IS REDDIT_WORD.JSON FILE & THE 
 ## The code below creates two json files containing the individual words from each tweet/reddit post 
 
 # Importing Libraries 
