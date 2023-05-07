@@ -68,7 +68,6 @@ My favorite piece of code is not an actual line a code, rather it is an essentia
 
 My favorite piece of code was the mechanics of the word cloud generator itself. We imported matplotlib.pyplot as plt which is an interface to the matplot library. The .pyplot opens the figure word cloud on the screen and acts as the figure GUI manager with the interactive plot. The library is interesting as it's a multi-platform data visualization library built on arrays to be used for interactive plots and programmatic plot generation. The library made it very easy to visualize and manipulate any details of the plot. 
 
-
 ## Citations
 
 [Twitter and Reddit Sentimental analysis Dataset](https://www.kaggle.com/datasets/cosmos98/twitter-and-reddit-sentimental-analysis-dataset)
