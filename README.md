@@ -1,5 +1,11 @@
 # Programming-II-Final-Project-
 
+We extracted a Kaggle Twietter and Reddit Sentimental analysis Dataset derived from there respectived APIs. The comments and tweets were made on Narendra Modi, Other Leaders, and People's opinion toward the Next Prime Minister of the Nation (General Elections in India -2019). The Twitter data set held ~163K tweets whereas the Reddit.csv had ~37K comments. We then utilized a Natural Language Toolkit (NLTK) platform the 
+
+
+
+
+
 ## Libraries we Utilized
 ``` 
 from wordcloud import WordCloud
