@@ -33,6 +33,8 @@ wordcloud = WordCloud(width = 800, height = 800,
 				background_color ='white',
 				min_font_size = 10).generate(text)
 ```
+* Takes all the elements and joins them into a single string of data in order to plot the data cloud 
+
 ### Word Cloud Image 
 ```
 plt.figure(figsize = (8, 8), facecolor = None)
@@ -42,7 +44,8 @@ plt.tight_layout(pad = 0)
 
 plt.show()
 ``` 
-
+* Generates the word cloud image 
+* plt --> creates the word cloud animation through the Matplotlib and features 
     
 
 
