@@ -44,18 +44,12 @@ plt.tight_layout(pad = 0)
 
 plt.show()
 ``` 
-<<<<<<< HEAD
 
  > Here is our Reddit wordcloud:
 ![reddit_wordcloud](images/reddit_word_cloud.png)
 
  > Here is our Twitter wordcloud:
 ![python_wordcloud](images/twitter_word_cloud.png)
-=======
-* Generates the word cloud image 
-* plt --> creates the word cloud animation through the Matplotlib and features 
-    
->>>>>>> febc47de31d9a0e93ea0ea07bdaeee925af34323
 
 
 
