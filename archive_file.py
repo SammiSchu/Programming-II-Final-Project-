@@ -6,7 +6,8 @@
 import pandas as pd
 from functools import reduce
 import json
-import operator 
+import operator
+import nltk
 
 
 def save_to_json_file(obj, filename):
@@ -29,7 +30,6 @@ def article_filter(df):
         return False
     else:
         return True
-
 
 
 # # Importing Data Frames 
@@ -60,8 +60,18 @@ def article_filter(df):
 # # Filtering Each JSON File to Eliminate Articles
 
 tweet_words_json = read_json_file('tweet_words.json')
-articles = ['a', 'an', 'the', 'it', 'is', 'its', 'they', 'them', 'their', 'our', 'all', 'any', 'another', 'I', 'both', 'each','we','us','some', 'anything', 'these', 'he', 'him', 'she', 'most', 'you', 'her', 'others', 'himself', 'where', 'whose', 'your']
-filtered_tweet_words = [word for word in tweet_words_json if word not in articles]
+# The original style of filtering out articles
+#articles = ['a', 'an', 'the', 'it', 'is', 'its', 'they', 'them', 'their', 'our', 'all', 'any', 'another', 'I', 'both', 'each','we','us','some', 'anything', 'these', 'he', 'him', 'she', 'most', 'you', 'her', 'others', 'himself', 'where', 'whose', 'your']
+#filtered_tweet_words = [word for word in tweet_words_json if word not in articles]
+
+# Filtering out articles using NLTK
+# Using nltk, we can tag each word with the part of speech
+# see https://www.nltk.org/book/ch05.html#tab-universal-tagset
+tagged_tweet_words = nltk.pos_tag(tweet_words_json, tagset='universal')
+parts_not_wanted = ['PRON', 'ADP', 'ADV', 'CONJ', 'DET', 'PRT', '.']
+filtered = [w for w in tagged_tweet_words if w[1] not in parts_not_wanted]
+# turn back into a regular list of words
+filtered_tweet_words = [w[0] for w in filtered]
 save_to_json_file(filtered_tweet_words, 'filtered_tweet_words.json')
 
 
