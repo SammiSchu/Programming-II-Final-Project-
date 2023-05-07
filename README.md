@@ -1,12 +1,9 @@
 # Programming-II-Final-Project-
 
-We extracted a Kaggle Twietter and Reddit Sentimental analysis Dataset derived from there respectived APIs. The comments and tweets were made on Narendra Modi, Other Leaders, and People's opinion toward the Next Prime Minister of the Nation (General Elections in India -2019). The Twitter data set held ~163K tweets whereas the Reddit.csv had ~37K comments. We then utilized a Natural Language Toolkit (NLTK) platform the 
+We extracted a Kaggle Twietter and Reddit Sentimental analysis Dataset derived from there respectived APIs. The comments and tweets were made on Narendra Modi, Other Leaders, and People's opinion toward the Next Prime Minister of the Nation (General Elections in India -2019). The Twitter data set held ~163K tweets whereas the Reddit.csv had ~37K comments. We then utilized a Natural Language Toolkit (NLTK) platform to filter out common words such as the, we, them. Next with the newly filtered .json datset we worked with the world cloud generator to obtain our cloud. 
 
 
-
-
-
-## Libraries we Utilized
+## Libraries Utilized
 ``` 
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -16,8 +13,7 @@ import csv
 from functools import reduce
 import operator 
 ```
-## Processing Data 
-### Data Management
+## Data Management
 ```
 def read_json_file(filename):
     f = open(filename, 'r')
@@ -29,7 +25,7 @@ def read_json_file(filename):
     - converts the JSON string document into a Python dictionary 
     - helps retrive the data from JSON to python
     
-### Word Cloud Code
+## Word Cloud Code
 
 ```
 words_list = read_json_file("filtered_tweet_words.json")
@@ -39,9 +35,9 @@ wordcloud = WordCloud(width = 800, height = 800,
 				background_color ='white',
 				min_font_size = 10).generate(text)
 ```
-* Takes all the elements and joins them into a single string of data in order to plot the data cloud 
+* Takes all the elements and joins them into a single string of data in order to plot the data cloud
 
-### Word Cloud Image 
+## Word Cloud Image 
 ```
 plt.figure(figsize = (8, 8), facecolor = None)
 plt.imshow(wordcloud)
@@ -59,7 +55,6 @@ plt.show()
 
 
 
-
 ## Favorite Piece of Code
 
 ## Adom 
@@ -73,5 +68,19 @@ My favorite piece of code is not an actual line a code, rather it is an essentia
 
 My favorite piece of code was the mechanics of the word cloud generator itself. We imported matplotlib.pyplot as plt which is an interface to the matplot library. The .pyplot opens the figure word cloud on the screen and acts as the figure GUI manager with the interactive plot. The library is interesting as it's a multi-platform data visualization library built on arrays to be used for interactive plots and programmatic plot generation. The library made it very easy to visualize and manipulate any details of the plot. 
 
+
+## Citations
+
+[Twitter and Reddit Sentimental analysis Dataset](https://www.kaggle.com/datasets/cosmos98/twitter-and-reddit-sentimental-analysis-dataset)
+- Credit: [Chaithanya Kumar A](https://www.kaggle.com/cosmos98)
+- License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+[NLTK: Natural Language Tool Kit](https://github.com/nltk/nltk)
+- Credit: [Tom Aarsen, and a lof of other people we are very thankful for!](https://www.nltk.org/team.html)
+- License: [Apache License 2.0](https://github.com/nltk/nltk/blob/develop/LICENSE.txt)
+
+[Generating WordClouds in Python Tutorial ](https://www.datacamp.com/tutorial/wordcloud-python)
+- Credit: [Duong Vu](https://www.datacamp.com/profile/dqvu)
+- License: [None Listed](https://www.datacamp.com/terms-of-use#preamble)
     
 
