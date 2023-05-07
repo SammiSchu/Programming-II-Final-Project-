@@ -43,7 +43,11 @@ plt.tight_layout(pad = 0)
 plt.show()
 ``` 
 
-    
+ > Here is our Reddit wordcloud:
+![reddit_wordcloud](images/reddit_word_cloud.png)
+
+ > Here is our Twitter wordcloud:
+![python_wordcloud](images/twitter_word_cloud.png)
 
 
 
