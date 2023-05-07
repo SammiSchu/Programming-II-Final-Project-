@@ -8,19 +8,27 @@ from functools import reduce
 import json
 import operator 
 
-# # Function landing pad 
+
 def save_to_json_file(obj, filename):
     f = open(filename, 'w')
     json.dump(obj, f)
     f.close()
 
-# def article_filter(df):
-#     articles = ['a', 'an', 'the', 'it', 'is', 'its', 'they', 'them', 'their', 'our', 'all', 'any', 'another', 'I', 'both', 'each','we'
-#                 'us','some', 'anything', 'these', 'he', 'him', 'she', 'most', 'you', 'her', 'others', 'himself', 'where', 'whose', 'your']
-#     if ( in articles):
-#         return False
-#     else:
-#         return True
+
+def read_json_file(filename):
+    f = open(filename, 'r')
+    data = json.load(f)
+    f.close()
+    return data
+
+
+def article_filter(df):
+    articles = ['a', 'an', 'the', 'it', 'is', 'its', 'they', 'them', 'their', 'our', 'all', 'any', 'another', 'I', 'both', 'each','we'
+                'us', 'some', 'anything', 'these', 'he', 'him', 'she', 'most', 'you', 'her', 'others', 'himself', 'where', 'whose', 'your']
+    if df in articles:
+        return False
+    else:
+        return True
 
 
 
@@ -51,10 +59,9 @@ def save_to_json_file(obj, filename):
 
 # # Filtering Each JSON File to Eliminate Articles
 
-tweet_words_json = pd.read_json('tweet_words.json')
-articles = ['a', 'an', 'the', 'it', 'is', 'its', 'they', 'them', 'their', 'our', 'all', 'any', 'another', 'I', 'both', 'each','we'
-'us','some', 'anything', 'these', 'he', 'him', 'she', 'most', 'you', 'her', 'others', 'himself', 'where', 'whose', 'your']
-filtered_tweet_words = reduce(lambda acc, curr,: if curr in articles  ,  tweet_words_json)
+tweet_words_json = read_json_file('tweet_words.json')
+articles = ['a', 'an', 'the', 'it', 'is', 'its', 'they', 'them', 'their', 'our', 'all', 'any', 'another', 'I', 'both', 'each','we','us','some', 'anything', 'these', 'he', 'him', 'she', 'most', 'you', 'her', 'others', 'himself', 'where', 'whose', 'your']
+filtered_tweet_words = [word for word in tweet_words_json if word not in articles]
 save_to_json_file(filtered_tweet_words, 'filtered_tweet_words.json')
 
 
