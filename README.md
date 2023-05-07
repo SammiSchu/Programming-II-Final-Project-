@@ -33,6 +33,8 @@ wordcloud = WordCloud(width = 800, height = 800,
 				background_color ='white',
 				min_font_size = 10).generate(text)
 ```
+* Takes all the elements and joins them into a single string of data in order to plot the data cloud 
+
 ### Word Cloud Image 
 ```
 plt.figure(figsize = (8, 8), facecolor = None)
@@ -42,12 +44,18 @@ plt.tight_layout(pad = 0)
 
 plt.show()
 ``` 
+<<<<<<< HEAD
 
  > Here is our Reddit wordcloud:
 ![reddit_wordcloud](images/reddit_word_cloud.png)
 
  > Here is our Twitter wordcloud:
 ![python_wordcloud](images/twitter_word_cloud.png)
+=======
+* Generates the word cloud image 
+* plt --> creates the word cloud animation through the Matplotlib and features 
+    
+>>>>>>> febc47de31d9a0e93ea0ea07bdaeee925af34323
 
 
 
@@ -62,5 +70,8 @@ One part of the code that I particularly enjoyed was when we used the NLTK packa
 
 
 ## Maya 
+
+My favorite piece of code was the mechanics of the word cloud generator itself. We imported matplotlib.pyplot as plt which is an interface to the matplot library. The .pyplot opens the figure word cloud on the screen and acts as the figure GUI manager with the interactive plot. The library is interesting as it's a multi-platform data visualization library built on arrays to be used for interactive plots and programmatic plot generation. The library made it very easy to visualize and manipulate any details of the plot. 
+
     
 
