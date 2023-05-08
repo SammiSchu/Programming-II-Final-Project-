@@ -62,6 +62,10 @@ plt.show()
 One part of the code that I particularly enjoyed was when we used the NLTK package to filter a massive list of words and create a JSON file of strings that contained only the words we wanted to include in our final word cloud. Using this package was incredibly helpful, saving us a lot of time and sparing us from the need for extensive logical thinking. Our success with NLTK is a testament to our team's hard work and our growing proficiency with Python, libraries, and documentation. Without NLTK, we would have spent an unnecessary amount of time on a task that ultimately took only minutes to complete.
 
 ## Sammi 
+
+![](images/IMG_8275.jpg)
+![](images/IMG_8277.jpg)
+
 My favorite piece of code is not an actual line a code, rather it is an essential part of the coding process. Shown above are two images of Mark's white board that I used to write out what we were actually trying to accomplish through this project. I often find myself getting overwhelmed while programming and when this happens I try to solve 30 million different problems at once (turns out this is an innefective way to solve problems). Taking a moment to write out the steps of this project allowed me to have a clear objective. With this objective in mind, I knew what idea i needed to turn into code before I got behind the keyboard. *also Mark has been telling me to do this for years and this is the first time I remembered to do it on my own and it was incredibly helpful so thank you mark*
 
 ## Maya 
